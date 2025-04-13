@@ -62,14 +62,12 @@ git commit -m "Implement removeTaskByName"
 git push origin 1-remove-a-task-by-name
 Објаснување:
 - Го праќа локалниот commit на гранката кон GitHub.
-+
 - Креиран Pull Request од гранката 1-remove-a-task-by-name кон master.
 - Преку GitHub.
 
 
 Чекор 14.2:
 git checkout -b 2-sort-tasks-by-priority origin/2-sort-tasks-by-priority
-
 Имплементација:
 public void sortTasksByPriority() {
     tasks.sort(Comparator.comparingInt(Task::getPriority));
@@ -83,13 +81,10 @@ git commit -m "Implement sortTasksByPriority"
 
 Команда:
 git push origin 2-sort-tasks-by-priority
-
-+
 - Креирано Pull Request преку GitHub
 
 Чекор 14.3:
 git checkout -b 3-count-tasks-per-category origin/3-count-tasks-per-category
-
 Имплементација:
 public Map<String, Integer> countTasksPerCategory() {
         Map<String, Integer> categoryCountMap = new HashMap<>();
@@ -107,28 +102,22 @@ public Map<String, Integer> countTasksPerCategory() {
 Команда:
 git add .
 git commit -m "Implement countTasksPerCategory"
-
 Команда:
 git push origin 3-count-tasks-per-category
-
-+
 - Креирано Pull Request преку GitHub
 
 Чекор 20: 
 Merged:
 1-remove-a-task-by-name
 2-sort-tasks-by-priority
-
 Конфликти: Не се појавија конфликти.
 Стратегија: GitHub користи fast-forward merge или merge commit ако има повеќе commits.
-
 Pull requests се успешно споени преку веб-интерфејс.
 
 Чекор 21: Проверка на Project board
 Issues што беа споени:
-✓ Remove a task by name
-✓ Sort tasks by priority
-
+- Remove a task by name
+- Sort tasks by priority
 Автоматски се преместени во фазата Done.
 
 Чекор 22: Merge на третата гранка локално
@@ -136,7 +125,6 @@ Issues што беа споени:
 git checkout master
 git pull origin master
 git merge 3-count-tasks-per-category
-
 Конфликти: Не се појавија конфликти.
 Стратегија: merge commit (дефолт merge стратегија на Git).
 
@@ -144,27 +132,45 @@ git merge 3-count-tasks-per-category
 Команда:
 git push origin master
 
-Локалната и оддалечената гранка се синхронизирани.
-
 Чекор 24: Проверка по merge на третата гранка
 Pull request за 3-count-tasks-per-category е автоматски затворен.
-
-Issue во GitHub Project е преместен во фазата Done.
 
 Чекор 25: Финален commit
 Додадени датотеки:
 - logs.txt (со git логовите од сите гранки)
 - 223073.txt (документацијата за текот на лабораториската вежба)
-
 Команди:
 git add logs.txt 223073.txt
 git commit -m "Final commit"
 
 Чекор 26: Финален push
-
 Команда:
 git push origin master
 
-Сите датотеки се успешно прикачени на оддалечениот репозиториум.
+Чекор 27: Fork на репозиториум
+Направен fork од официјалниот репозиториум
+Fork се појави на мојот GitHub профил
+Објаснување:
+Со fork се креира копија од оригиналниот репозиториум во мојот профил, што ми овозможува да направам сопствени промени без да влијаам врз оригиналот.
+
+Чекор 28: Клонирање на fork-от
+Објаснување:
+Со git clone ја симнувам локално копијата од мојот fork. Со cd влегувам во директориумот за да работам во проектот.
+
+Чекор 29: Креирање и додавање на 223073.txt
+Команди:
+echo "Ивана Стратрова 223073" > 223073.txt
+git add 223073.txt
+git commit -m "Add file"
+Објаснување:
+Креирана е датотека со моето име и индекс, додадена во staging area и направен е commit со соодветна порака.
+
+Чекор 30: Синхронизација со оддалечениот репозиториум
+Команди:
+git push origin master
+Објаснување:
+Со оваа команда локалните промени се испраќаат на GitHub (на мојот fork).
+
+Чекор 31: Креирање Pull Request
 
 

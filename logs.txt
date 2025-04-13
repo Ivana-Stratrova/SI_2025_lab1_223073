@@ -1,0 +1,15 @@
+*   8b03337 Merge branch '7-count-tasks-per-category' into master
+|\  
+| * 29243d7 Implement countTasksPerCategory
+* |   abea509 Merge pull request #11 from Ivana-Stratrova/2-sort-tasks-by-priority
+|\ \  
+| * | 3782af8 Implement sortTasksByPriority
+| |/  
+* |   dfafdf5 Merge pull request #10 from Ivana-Stratrova/1-remove-a-task-by-name
+|\ \  
+| |/  
+|/|   
+| * d64dd95 Implement removeTaskByName
+|/  
+* f6d1e84 Add starter code
+* e1e4881 Initial commit
